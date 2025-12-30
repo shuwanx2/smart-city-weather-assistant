@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="0dp"
+    android:id="@+id/home"
+    tools:context=".HomeActivity">
+
+    <!-- Top panel -->
+    <View
+        android:id="@+id/topPanelGraphic"
+        android:layout_width="0dp"
+        android:layout_height="80dp"
+        android:layout_margin="0dp"
+        android:background="#6750a5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- Title-->
+    <TextView
+        android:id="@+id/titleText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Team 316"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+        android:textColor="#EDE8E8"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@id/topPanelGraphic"
+        app:layout_constraintEnd_toEndOf="@id/topPanelGraphic"
+        app:layout_constraintStart_toStartOf="@id/topPanelGraphic"
+        app:layout_constraintTop_toTopOf="@id/topPanelGraphic" />
+
+    <!-- CS427 Project App label -->
+    <TextView
+        android:id="@+id/projectAppLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="CS427 Project App"
+        android:textSize="18sp"
+        android:textColor="#666666"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/topPanelGraphic" />
+
+    <!-- List of cities label -->
+    <TextView
+        android:id="@+id/citiesLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="List of cities"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="#333333"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/projectAppLabel" />
+
+    <!-- RecyclerView that displays the list of saved cities -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/cityRecyclerView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="8dp"
+        android:scrollbars="vertical"
+        android:overScrollMode="always"
+        app:layout_constraintBottom_toTopOf="@id/buttonAddLocation"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/citiesLabel" />
+
+    <!-- Button to allow the user to add a new city -->
+    <Button
+        android:id="@+id/buttonAddLocation"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginBottom="8dp"
+        android:text="Add City"
+        app:layout_constraintBottom_toTopOf="@id/settingsButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <!-- Settings: Settings button at the top, which takes user to settings -->
+    <Button
+        android:id="@+id/settingsButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginBottom="32dp"
+        android:text="Settings"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

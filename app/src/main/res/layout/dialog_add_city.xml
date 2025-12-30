@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:padding="20dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <!-- Required text field for entering the city name -->
+    <EditText
+        android:id="@+id/inputCityName"
+        android:hint="City name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <!-- Optional text field for entering the city's latitude -->
+    <EditText
+        android:id="@+id/inputCityLat"
+        android:hint="Latitude (optional ex. 40.1138)"
+        android:inputType="numberSigned|numberDecimal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <!-- Optional text field for entering the city's longitude -->
+    <EditText
+        android:id="@+id/inputCityLon"
+        android:hint="Longitude (optional ex. -88.2260)"
+        android:inputType="numberSigned|numberDecimal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+</LinearLayout>

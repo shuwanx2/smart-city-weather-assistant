@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/weather"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="0dp"
+    tools:context=".WeatherActivity">
+
+    <!-- Top Panel -->
+    <View
+        android:id="@+id/topPanelGraphic"
+        android:layout_width="0dp"
+        android:layout_height="80dp"
+        android:background="#6750a5"
+        android:tag="accentBg"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- City Name Title -->
+    <TextView
+        android:id="@+id/cityNameTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="City Weather"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+        android:textColor="#FFFFFF"
+        android:tag="fixedText"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@id/topPanelGraphic"
+        app:layout_constraintEnd_toEndOf="@id/topPanelGraphic"
+        app:layout_constraintStart_toStartOf="@id/topPanelGraphic"
+        app:layout_constraintTop_toTopOf="@id/topPanelGraphic" />
+
+    <!-- Scrollable Content -->
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/topPanelGraphic">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="24dp">
+
+            <!-- Generate City View Button -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Weather Information"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="12dp" />
+
+            <!-- Weather Information Section -->
+            <TextView
+                android:id="@+id/weatherDateTime"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Date &amp; Time: Loading..."
+                android:textSize="16sp"
+                android:layout_marginBottom="8dp" />
+
+
+            <TextView
+                android:id="@+id/weatherTemperature"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Temperature: Loading..."
+                android:textSize="16sp"
+                android:layout_marginBottom="8dp" />
+
+            <TextView
+                android:id="@+id/weatherCondition"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Condition: Loading..."
+                android:textSize="16sp"
+                android:layout_marginBottom="8dp" />
+
+            <TextView
+                android:id="@+id/weatherHumidity"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Humidity: Loading..."
+                android:textSize="16sp"
+                android:layout_marginBottom="8dp" />
+
+            <TextView
+                android:id="@+id/weatherWind"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Wind: Loading..."
+                android:textSize="16sp"
+                android:layout_marginBottom="24dp" />
+
+            <!-- Loading Text -->
+            <TextView
+                android:id="@+id/loadingText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginBottom="16dp"
+                android:text="Generating image..."
+                android:textSize="16sp"
+                android:visibility="gone" />
+
+            <!-- Buttons -->
+
+            <Button
+                android:id="@+id/weatherInsights"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Weather Insights" />
+
+            <Button
+                android:id="@+id/generateCityViewButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="24dp"
+                android:text="Generate City View" />
+
+            <Button
+                android:id="@+id/backButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Back to Home" />
+
+            <!-- Generated City View Image -->
+            <ImageView
+                android:id="@+id/cityViewImage"
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                android:layout_marginBottom="16dp"
+                android:background="#F5F5F5"
+                android:contentDescription="Generated city view"
+                android:scaleType="centerCrop" />
+
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

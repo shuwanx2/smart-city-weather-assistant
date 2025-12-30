@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- Google Maps fragment that displays the interactive map -->
+    <fragment
+        android:id="@+id/map"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+    <!-- Button to close and exit the map screen -->
+    <Button
+        android:id="@+id/escapeMap"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Close" />
+
+    <!-- Vertical container for zoom controls at the bottom-right -->
+    <LinearLayout
+        android:layout_width="57dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_gravity="bottom|end">
+
+        <!-- Zoom in button for the map -->
+        <Button
+            android:id="@+id/zoom_in"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:text="+" />
+
+        <!-- Zoom out button for the map -->
+        <Button
+            android:id="@+id/zoom_out"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:text="-" />
+    </LinearLayout>
+
+    <!-- Panel that shows city name and coordinate details -->
+    <TextView
+        android:id="@+id/cityDetailsView"
+        android:layout_width="120dp"
+        android:layout_height="52dp"
+        android:layout_gravity="top|end"
+        android:background="#ff6750a4"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textColorLink="#E4E4E4" />
+
+
+</FrameLayout>
